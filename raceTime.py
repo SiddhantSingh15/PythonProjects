@@ -65,10 +65,10 @@ for racer in racers:
         NOR.append(str(racer.text.split(" ")[10]))
         NOR.append(int(racer.text.split(" ")[9]))
     elif racer.text.split(" ")[1] == '27':
-        if racer.text.split(" ")[0] != 'DNF':
+        if racer.text.split(" ")[0] != 'DNS':
             HUL.append(int(racer.text.split(" ")[0]))
         else:
-            HUL.append('DNF')
+            HUL.append('DNS')
         HUL.append(str(racer.text.split(" ")[11]))
         HUL.append(int(racer.text.split(" ")[10]))
     elif racer.text.split(" ")[1] == '18':
