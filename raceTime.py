@@ -65,10 +65,10 @@ for racer in racers:
         NOR.append(str(racer.text.split(" ")[10]))
         NOR.append(int(racer.text.split(" ")[9]))
     elif racer.text.split(" ")[1] == '27':
-        if racer.text.split(" ")[0] != 'DNS':
+        if racer.text.split(" ")[0] != 'DNF':
             HUL.append(int(racer.text.split(" ")[0]))
         else:
-            HUL.append('DNS')
+            HUL.append('DNF')
         HUL.append(str(racer.text.split(" ")[11]))
         HUL.append(int(racer.text.split(" ")[10]))
     elif racer.text.split(" ")[1] == '18':
@@ -189,10 +189,10 @@ for rowx in range(3, 23):
         lap = HAM[2]
         posLoc = s.cell(rowx, posCol)
         timeLoc = s.cell(rowx, timeCol)
-        laploc = s.cell(rowx, lapCol)
+        lapLoc = s.cell(rowx, lapCol)
         posLoc.value = position
         timeLoc.value = time
-        laploc.value = lap
+        lapLoc.value = lap
         
     elif s.cell(rowx, colx).value == 'BOT':
         position = BOT[0]
@@ -200,10 +200,10 @@ for rowx in range(3, 23):
         lap = BOT[2]
         posLoc = s.cell(rowx, posCol)
         timeLoc = s.cell(rowx, timeCol)
-        laploc = s.cell(rowx, lapCol)
+        lapLoc = s.cell(rowx, lapCol)
         posLoc.value = position
         timeLoc.value = time
-        laploc.value = lap
+        lapLoc.value = lap
         
     elif s.cell(rowx, colx).value == 'VET':
         position = VET[0]
@@ -211,10 +211,10 @@ for rowx in range(3, 23):
         lap = VET[2]
         posLoc = s.cell(rowx, posCol)
         timeLoc = s.cell(rowx, timeCol)
-        laploc = s.cell(rowx, lapCol)
+        lapLoc = s.cell(rowx, lapCol)
         posLoc.value = position
         timeLoc.value = time
-        laploc.value = lap
+        lapLoc.value = lap
         
     elif s.cell(rowx, colx).value == 'LEC':
         position = LEC[0]
@@ -222,10 +222,10 @@ for rowx in range(3, 23):
         lap = LEC[2]
         posLoc = s.cell(rowx, posCol)
         timeLoc = s.cell(rowx, timeCol)
-        laploc = s.cell(rowx, lapCol)
+        lapLoc = s.cell(rowx, lapCol)
         posLoc.value = position
         timeLoc.value = time
-        laploc.value = lap
+        lapLoc.value = lap
         
     elif s.cell(rowx, colx).value == 'VER':
         position = VER[0]
@@ -233,10 +233,10 @@ for rowx in range(3, 23):
         lap = VER[2]
         posLoc = s.cell(rowx, posCol)
         timeLoc = s.cell(rowx, timeCol)
-        laploc = s.cell(rowx, lapCol)
+        lapLoc = s.cell(rowx, lapCol)
         posLoc.value = position
         timeLoc.value = time
-        laploc.value = lap
+        lapLoc.value = lap
         
     elif s.cell(rowx, colx).value == 'ALB':
         position = ALB[0]
@@ -244,10 +244,10 @@ for rowx in range(3, 23):
         lap = ALB[2]
         posLoc = s.cell(rowx, posCol)
         timeLoc = s.cell(rowx, timeCol)
-        laploc = s.cell(rowx, lapCol)
+        lapLoc = s.cell(rowx, lapCol)
         posLoc.value = position
         timeLoc.value = time
-        laploc.value = lap
+        lapLoc.value = lap
         
     elif s.cell(rowx, colx).value == 'NOR':
         position = NOR[0]
@@ -255,10 +255,10 @@ for rowx in range(3, 23):
         lap = NOR[2]
         posLoc = s.cell(rowx, posCol)
         timeLoc = s.cell(rowx, timeCol)
-        laploc = s.cell(rowx, lapCol)
+        lapLoc = s.cell(rowx, lapCol)
         posLoc.value = position
         timeLoc.value = time
-        laploc.value = lap
+        lapLoc.value = lap
         
     elif s.cell(rowx, colx).value == 'SAI':
         position = SAI[0]
@@ -266,10 +266,10 @@ for rowx in range(3, 23):
         lap = SAI[2]
         posLoc = s.cell(rowx, posCol)
         timeLoc = s.cell(rowx, timeCol)
-        laploc = s.cell(rowx, lapCol)
+        lapLoc = s.cell(rowx, lapCol)
         posLoc.value = position
         timeLoc.value = time
-        laploc.value = lap
+        lapLoc.value = lap
         
     elif s.cell(rowx, colx).value == 'RIC':
         position = RIC[0]
@@ -277,10 +277,10 @@ for rowx in range(3, 23):
         lap = RIC[2]
         posLoc = s.cell(rowx, posCol)
         timeLoc = s.cell(rowx, timeCol)
-        laploc = s.cell(rowx, lapCol)
+        lapLoc = s.cell(rowx, lapCol)
         posLoc.value = position
         timeLoc.value = time
-        laploc.value = lap
+        lapLoc.value = lap
         
     elif s.cell(rowx, colx).value == 'OCO':
         position = OCO[0]
@@ -288,10 +288,10 @@ for rowx in range(3, 23):
         lap = OCO[2]
         posLoc = s.cell(rowx, posCol)
         timeLoc = s.cell(rowx, timeCol)
-        laploc = s.cell(rowx, lapCol)
+        lapLoc = s.cell(rowx, lapCol)
         posLoc.value = position
         timeLoc.value = time
-        laploc.value = lap
+        lapLoc.value = lap
         
     elif s.cell(rowx, colx).value == 'GAS':
         position = GAS[0]
@@ -299,10 +299,10 @@ for rowx in range(3, 23):
         lap = GAS[2]
         posLoc = s.cell(rowx, posCol)
         timeLoc = s.cell(rowx, timeCol)
-        laploc = s.cell(rowx, lapCol)
+        lapLoc = s.cell(rowx, lapCol)
         posLoc.value = position
         timeLoc.value = time
-        laploc.value = lap
+        lapLoc.value = lap
         
     elif s.cell(rowx, colx).value == 'KVY':
         position = KVY[0]
@@ -310,10 +310,10 @@ for rowx in range(3, 23):
         lap = KVY[2]
         posLoc = s.cell(rowx, posCol)
         timeLoc = s.cell(rowx, timeCol)
-        laploc = s.cell(rowx, lapCol)
+        lapLoc = s.cell(rowx, lapCol)
         posLoc.value = position
         timeLoc.value = time
-        laploc.value = lap
+        lapLoc.value = lap
         
     elif s.cell(rowx, colx).value == 'MAG':
         position = MAG[0]
@@ -321,10 +321,10 @@ for rowx in range(3, 23):
         lap = MAG[2]
         posLoc = s.cell(rowx, posCol)
         timeLoc = s.cell(rowx, timeCol)
-        laploc = s.cell(rowx, lapCol)
+        lapLoc = s.cell(rowx, lapCol)
         posLoc.value = position
         timeLoc.value = time
-        laploc.value = lap
+        lapLoc.value = lap
         
     elif s.cell(rowx, colx).value == 'GRO':
         position = GRO[0]
@@ -332,10 +332,10 @@ for rowx in range(3, 23):
         lap = GRO[2]
         posLoc = s.cell(rowx, posCol)
         timeLoc = s.cell(rowx, timeCol)
-        laploc = s.cell(rowx, lapCol)
+        lapLoc = s.cell(rowx, lapCol)
         posLoc.value = position
         timeLoc.value = time
-        laploc.value = lap
+        lapLoc.value = lap
         
     elif s.cell(rowx, colx).value == 'RUS':
         position = RUS[0]
@@ -343,10 +343,10 @@ for rowx in range(3, 23):
         lap = RUS[2]
         posLoc = s.cell(rowx, posCol)
         timeLoc = s.cell(rowx, timeCol)
-        laploc = s.cell(rowx, lapCol)
+        lapLoc = s.cell(rowx, lapCol)
         posLoc.value = position
         timeLoc.value = time
-        laploc.value = lap
+        lapLoc.value = lap
         
     elif s.cell(rowx, colx).value == 'LAT':
         position = LAT[0]
@@ -354,10 +354,10 @@ for rowx in range(3, 23):
         lap = LAT[2]
         posLoc = s.cell(rowx, posCol)
         timeLoc = s.cell(rowx, timeCol)
-        laploc = s.cell(rowx, lapCol)
+        lapLoc = s.cell(rowx, lapCol)
         posLoc.value = position
         timeLoc.value = time
-        laploc.value = lap
+        lapLoc.value = lap
         
     elif s.cell(rowx, colx).value == 'GIO':
         position = GIO[0]
@@ -365,10 +365,10 @@ for rowx in range(3, 23):
         lap = GIO[2]
         posLoc = s.cell(rowx, posCol)
         timeLoc = s.cell(rowx, timeCol)
-        laploc = s.cell(rowx, lapCol)
+        lapLoc = s.cell(rowx, lapCol)
         posLoc.value = position
         timeLoc.value = time
-        laploc.value = lap
+        lapLoc.value = lap
         
     elif s.cell(rowx, colx).value == 'RAI':
         position = RAI[0]
@@ -376,10 +376,10 @@ for rowx in range(3, 23):
         lap = RAI[2]
         posLoc = s.cell(rowx, posCol)
         timeLoc = s.cell(rowx, timeCol)
-        laploc = s.cell(rowx, lapCol)
+        lapLoc = s.cell(rowx, lapCol)
         posLoc.value = position
         timeLoc.value = time
-        laploc.value = lap
+        lapLoc.value = lap
         
     elif s.cell(rowx, colx).value == 'HUL':
         position = HUL[0]
@@ -387,10 +387,10 @@ for rowx in range(3, 23):
         lap = HUL[2]
         posLoc = s.cell(rowx, posCol)
         timeLoc = s.cell(rowx, timeCol)
-        laploc = s.cell(rowx, lapCol)
+        lapLoc = s.cell(rowx, lapCol)
         posLoc.value = position
         timeLoc.value = time
-        laploc.value = lap
+        lapLoc.value = lap
         
     elif s.cell(rowx, colx).value == 'STR':
         position = STR[0]
@@ -398,10 +398,10 @@ for rowx in range(3, 23):
         lap = STR[2]
         posLoc = s.cell(rowx, posCol)
         timeLoc = s.cell(rowx, timeCol)
-        laploc = s.cell(rowx, lapCol)
+        lapLoc = s.cell(rowx, lapCol)
         posLoc.value = position
         timeLoc.value = time
-        laploc.value = lap
+        lapLoc.value = lap
 
 
 wb.save('/Users/siddhantsingh/Desktop/F1.xlsx')
