@@ -1,7 +1,7 @@
 from selenium import webdriver
 from openpyxl import *
 
-url = ''
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-british-grand-prix/classification'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -24,7 +24,7 @@ RUS = []
 LAT = []
 RAI = []
 GIO = []
-PER = []
+HUL = []
 STR = []
 
 for racer in racers:
@@ -64,13 +64,13 @@ for racer in racers:
             NOR.append('DNF')
         NOR.append(str(racer.text.split(" ")[10]))
         NOR.append(int(racer.text.split(" ")[9]))
-    elif racer.text.split(" ")[1] == '11':
+    elif racer.text.split(" ")[1] == '27':
         if racer.text.split(" ")[0] != 'DNF':
-            PER.append(int(racer.text.split(" ")[0]))
+            HUL.append(int(racer.text.split(" ")[0]))
         else:
-            PER.append('DNF')
-        PER.append(str(racer.text.split(" ")[11]))
-        PER.append(int(racer.text.split(" ")[10]))
+            HUL.append('DNF')
+        HUL.append(str(racer.text.split(" ")[11]))
+        HUL.append(int(racer.text.split(" ")[10]))
     elif racer.text.split(" ")[1] == '18':
         if racer.text.split(" ")[0] != 'DNF':
             STR.append(int(racer.text.split(" ")[0]))
@@ -173,7 +173,7 @@ for racer in racers:
 
 file_path = "/Users/siddhantsingh/Desktop/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['R3']
+s = wb['R4']
 
 colx = 3
 rowx = 3
@@ -381,10 +381,10 @@ for rowx in range(3, 23):
         timeLoc.value = time
         laploc.value = lap
         
-    elif s.cell(rowx, colx).value == 'PER':
-        position = PER[0]
-        time = PER[1]
-        lap = PER[2]
+    elif s.cell(rowx, colx).value == 'HUL':
+        position = HUL[0]
+        time = HUL[1]
+        lap = HUL[2]
         posLoc = s.cell(rowx, posCol)
         timeLoc = s.cell(rowx, timeCol)
         laploc = s.cell(rowx, lapCol)
