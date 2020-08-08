@@ -3,7 +3,7 @@ from openpyxl import *
 
 # QUALI ONE
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-british-grand-prix/classification/cd9303dc-670e-4381-a32d-2a1e4d303b66'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-70th-anniversity-grand-prix/classification/68576609-4450-4c82-83b2-1508b16b951e'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -75,7 +75,7 @@ for racer in racers:
 
 file_path = "/Users/siddhantsingh/Desktop/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q4']
+s = wb['Q5']
 
 colx = 2
 rowx = 3
@@ -269,7 +269,7 @@ print("\n")
 
 # QUALI TWO
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-british-grand-prix/classification/437e2b94-245e-4c39-968a-7fe64b6fcb46'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-70th-anniversity-grand-prix/classification/e7b0c8f0-dac1-43e7-921e-4a050d0ac3ee'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -340,7 +340,7 @@ for racer in range(15):
 
 file_path = "/Users/siddhantsingh/Desktop/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q4']
+s = wb['Q5']
 
 colx = 2
 rowx = 3
@@ -533,7 +533,7 @@ print("\n")
 
 # QUALI THREE
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-british-grand-prix/classification/628e6fe8-6af6-4f2a-b57b-a2b060eacf96'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-70th-anniversity-grand-prix/classification/dd258400-2e91-40cd-8ab2-18e45c418364'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -604,7 +604,7 @@ for racer in range(10):
 
 file_path = "/Users/siddhantsingh/Desktop/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q4']
+s = wb['Q5']
 
 colx = 2
 rowx = 3
