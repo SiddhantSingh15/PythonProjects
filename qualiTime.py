@@ -3,7 +3,7 @@ from openpyxl import *
 
 # QUALI ONE
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-70th-anniversity-grand-prix/classification/68576609-4450-4c82-83b2-1508b16b951e'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-spanish-grand-prix/classification/3bd4c9ef-7ef5-421f-8471-2f6d2cd3115d'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -26,7 +26,7 @@ RUS = []
 LAT = []
 RAI = []
 GIO = []
-HUL = []
+PER = []
 STR = []
 
 for racer in racers:
@@ -41,8 +41,8 @@ for racer in racers:
         ALB.append(str(racer.text.split(" ")[11]))
     elif racer.text.split(" ")[1] == '4':
         NOR.append(str(racer.text.split(" ")[10]))
-    elif racer.text.split(" ")[1] == '27':
-        HUL.append(str(racer.text.split(" ")[11]))
+    elif racer.text.split(" ")[1] == '11':
+        PER.append(str(racer.text.split(" ")[11]))
     elif racer.text.split(" ")[1] == '18':
         STR.append(str(racer.text.split(" ")[11]))
     elif racer.text.split(" ")[1] == '3':
@@ -75,7 +75,7 @@ for racer in racers:
 
 file_path = "/Users/siddhantsingh/Desktop/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q5']
+s = wb['Q6']
 
 colx = 2
 rowx = 3
@@ -245,9 +245,9 @@ for rowx in range(3, 23):
             timeLoc = s.cell(rowx, timeCol)
             timeLoc.value = 'NA'
 
-    elif s.cell(rowx, colx).value == 'HUL':
-        if len(HUL) != 0:
-            time = HUL[0]
+    elif s.cell(rowx, colx).value == 'PER':
+        if len(PER) != 0:
+            time = PER[0]
             timeLoc = s.cell(rowx, timeCol)
             timeLoc.value = time
         else:
@@ -269,7 +269,7 @@ print("\n")
 
 # QUALI TWO
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-70th-anniversity-grand-prix/classification/e7b0c8f0-dac1-43e7-921e-4a050d0ac3ee'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-spanish-grand-prix/classification/776918cc-2e57-4166-93c9-cd13ea801805'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -292,7 +292,7 @@ RUS = []
 LAT = []
 RAI = []
 GIO = []
-HUL = []
+PER = []
 STR = []
 
 for racer in range(15):
@@ -307,8 +307,8 @@ for racer in range(15):
         ALB.append(str(racers[racer].text.split(" ")[11]))
     elif racers[racer].text.split(" ")[1] == '4':
         NOR.append(str(racers[racer].text.split(" ")[10]))
-    elif racers[racer].text.split(" ")[1] == '27':
-        HUL.append(str(racers[racer].text.split(" ")[11]))
+    elif racers[racer].text.split(" ")[1] == '11':
+        PER.append(str(racers[racer].text.split(" ")[11]))
     elif racers[racer].text.split(" ")[1] == '18':
         STR.append(str(racers[racer].text.split(" ")[11]))
     elif racers[racer].text.split(" ")[1] == '3':
@@ -340,7 +340,7 @@ for racer in range(15):
 
 file_path = "/Users/siddhantsingh/Desktop/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q5']
+s = wb['Q6']
 
 colx = 2
 rowx = 3
@@ -509,9 +509,9 @@ for rowx in range(3, 23):
             timeLoc = s.cell(rowx, timeCol)
             timeLoc.value = 'NA'
 
-    elif s.cell(rowx, colx).value == 'HUL':
-        if len(HUL) != 0:
-            time = HUL[0]
+    elif s.cell(rowx, colx).value == 'PER':
+        if len(PER) != 0:
+            time = PER[0]
             timeLoc = s.cell(rowx, timeCol)
             timeLoc.value = time
         else:
@@ -533,7 +533,7 @@ print("\n")
 
 # QUALI THREE
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-70th-anniversity-grand-prix/classification/dd258400-2e91-40cd-8ab2-18e45c418364'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-spanish-grand-prix/classification/eb196517-a7f2-40ae-b582-3e63d6a5070c'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -556,7 +556,7 @@ RUS = []
 LAT = []
 RAI = []
 GIO = []
-HUL = []
+PER = []
 STR = []
 
 for racer in range(10):
@@ -571,8 +571,8 @@ for racer in range(10):
         ALB.append(str(racers[racer].text.split(" ")[11]))
     elif racers[racer].text.split(" ")[1] == '4':
         NOR.append(str(racers[racer].text.split(" ")[10]))
-    elif racers[racer].text.split(" ")[1] == '27':
-        HUL.append(str(racers[racer].text.split(" ")[11]))
+    elif racers[racer].text.split(" ")[1] == '11':
+        PER.append(str(racers[racer].text.split(" ")[11]))
     elif racers[racer].text.split(" ")[1] == '18':
         STR.append(str(racers[racer].text.split(" ")[11]))
     elif racers[racer].text.split(" ")[1] == '3':
@@ -604,7 +604,7 @@ for racer in range(10):
 
 file_path = "/Users/siddhantsingh/Desktop/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q5']
+s = wb['Q6']
 
 colx = 2
 rowx = 3
@@ -773,9 +773,9 @@ for rowx in range(3, 23):
             timeLoc = s.cell(rowx, timeCol)
             timeLoc.value = 'NA'
 
-    elif s.cell(rowx, colx).value == 'HUL':
-        if len(HUL) != 0:
-            time = HUL[0]
+    elif s.cell(rowx, colx).value == 'PER':
+        if len(PER) != 0:
+            time = PER[0]
             timeLoc = s.cell(rowx, timeCol)
             timeLoc.value = time
         else:
