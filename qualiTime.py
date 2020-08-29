@@ -3,7 +3,7 @@ from openpyxl import *
 
 # QUALI ONE
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-spanish-grand-prix/classification/3bd4c9ef-7ef5-421f-8471-2f6d2cd3115d'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-belgian-grand-prix/classification/4edcb624-1e29-4f3f-b08e-5ff09b5ee328'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -75,7 +75,7 @@ for racer in racers:
 
 file_path = "/Users/siddhantsingh/Desktop/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q6']
+s = wb['Q7']
 
 colx = 2
 rowx = 3
@@ -269,7 +269,7 @@ print("\n")
 
 # QUALI TWO
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-spanish-grand-prix/classification/776918cc-2e57-4166-93c9-cd13ea801805'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-belgian-grand-prix/classification/ba67d913-81d3-411b-90aa-23030619a72d'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -340,7 +340,7 @@ for racer in range(15):
 
 file_path = "/Users/siddhantsingh/Desktop/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q6']
+s = wb['Q7']
 
 colx = 2
 rowx = 3
@@ -533,7 +533,7 @@ print("\n")
 
 # QUALI THREE
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-spanish-grand-prix/classification/eb196517-a7f2-40ae-b582-3e63d6a5070c'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-belgian-grand-prix/classification/ca7e19c1-9fb8-42e0-9678-279fafa95f30'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -604,7 +604,7 @@ for racer in range(10):
 
 file_path = "/Users/siddhantsingh/Desktop/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q6']
+s = wb['Q7']
 
 colx = 2
 rowx = 3
