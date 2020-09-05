@@ -3,7 +3,7 @@ from openpyxl import *
 
 # QUALI ONE
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-belgian-grand-prix/classification/4edcb624-1e29-4f3f-b08e-5ff09b5ee328'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-italian-grand-prix/classification/48d0878a-7a1d-4d8a-86f5-cc74b733d487'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -73,9 +73,9 @@ for racer in racers:
         VET.append(str(racer.text.split(" ")[8]))
 
 
-file_path = "/Users/siddhantsingh/Desktop/F1.xlsx"
+file_path = "/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q7']
+s = wb['Q8']
 
 colx = 2
 rowx = 3
@@ -264,12 +264,12 @@ for rowx in range(3, 23):
             timeLoc.value = 'NA'
 
 
-wb.save('/Users/siddhantsingh/Desktop/F1.xlsx')
+wb.save('/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx')
 print("\n")
 
 # QUALI TWO
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-belgian-grand-prix/classification/ba67d913-81d3-411b-90aa-23030619a72d'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-italian-grand-prix/classification/ad81bc93-3985-40ac-b8ce-9816cd457c70'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -338,9 +338,9 @@ for racer in range(15):
     elif racers[racer].text.split(" ")[1] == '5':
         VET.append(str(racers[racer].text.split(" ")[8]))
 
-file_path = "/Users/siddhantsingh/Desktop/F1.xlsx"
+file_path = "/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q7']
+s = wb['Q8']
 
 colx = 2
 rowx = 3
@@ -527,13 +527,13 @@ for rowx in range(3, 23):
             timeLoc = s.cell(rowx, timeCol)
             timeLoc.value = 'NA'
 
-wb.save('/Users/siddhantsingh/Desktop/F1.xlsx')
+wb.save('/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx')
 print("\n")
 
 
 # QUALI THREE
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-belgian-grand-prix/classification/ca7e19c1-9fb8-42e0-9678-279fafa95f30'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-italian-grand-prix/classification/566cec4c-3a0c-491d-9513-6b3dad39fe61'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -602,9 +602,9 @@ for racer in range(10):
     elif racers[racer].text.split(" ")[1] == '5':
         VET.append(str(racers[racer].text.split(" ")[8]))
 
-file_path = "/Users/siddhantsingh/Desktop/F1.xlsx"
+file_path = "/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q7']
+s = wb['Q8']
 
 colx = 2
 rowx = 3
@@ -791,5 +791,5 @@ for rowx in range(3, 23):
             timeLoc = s.cell(rowx, timeCol)
             timeLoc.value = 'NA'
 
-wb.save('/Users/siddhantsingh/Desktop/F1.xlsx')
+wb.save('/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx')
 print("\n")

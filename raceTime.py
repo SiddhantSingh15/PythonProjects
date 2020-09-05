@@ -169,7 +169,7 @@ for racer in racers:
         VET.append(int(racer.text.split(" ")[7]))
 
 
-file_path = "/Users/siddhantsingh/Desktop/F1.xlsx"
+file_path = "/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx"
 wb = load_workbook(file_path)
 s = wb['R7']
 
@@ -402,4 +402,4 @@ for rowx in range(3, 23):
         lapLoc.value = lap
 
 
-wb.save('/Users/siddhantsingh/Desktop/F1.xlsx')
+wb.save('/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx')
