@@ -1,7 +1,7 @@
 from selenium import webdriver
 from openpyxl import *
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-belgian-grand-prix/classification/ae1bb12d-5de2-4e4d-bf73-5cab15dad0f6'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-italian-grand-prix/classification/c543823a-3298-466a-92e7-c0878629a0f5'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -86,10 +86,12 @@ for racer in racers:
         RIC.append(str(racer.text.split(" ")[11]))
         RIC.append(int(racer.text.split(" ")[10]))
     elif racer.text.split(" ")[1] == '55':
-        if racer.text.split(" ")[0] != 'DNS':
+        if racer.text.split(" ")[0] != 'DNF':
             SAI.append(int(racer.text.split(" ")[0]))
         else:
             SAI.append('DNS')
+        SAI.append(str(racer.text.split(" ")[9]))
+        SAI.append(int(racer.text.split(" ")[8]))
     elif racer.text.split(" ")[1] == '26':
         if racer.text.split(" ")[0] != 'DNF':
             KVY.append(int(racer.text.split(" ")[0]))
@@ -171,7 +173,7 @@ for racer in racers:
 
 file_path = "/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['R7']
+s = wb['R8']
 
 colx = 3
 rowx = 3
