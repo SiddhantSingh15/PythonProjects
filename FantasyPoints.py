@@ -120,7 +120,7 @@ HAM.racePos = 1
 HAM.finishRace = True
 HAM.beatTeammate = True
 HAM.fastestLap = True
-HAM.streaks = 0
+HAM.streaks = 15
 HAM.calculateQuali()
 HAM.calculateRace()
 HAM.calculateTotal()
@@ -130,12 +130,12 @@ BOT = Driver()
 BOT.name = 'BOT'
 BOT.qualiSesh = 'Q3'
 BOT.beatTeammateQuali = False
-BOT.qualiPos = 2
-BOT.racePos = 2
+BOT.qualiPos = 3
+BOT.racePos = 3
 BOT.finishRace = True
 BOT.beatTeammate = False
 BOT.fastestLap = False
-BOT.streaks = 10
+BOT.streaks = 5
 BOT.calculateQuali()
 BOT.calculateRace()
 BOT.calculateTotal()
@@ -145,12 +145,12 @@ VER = Driver()
 VER.name = 'VER'
 VER.qualiSesh = 'Q3'
 VER.beatTeammateQuali = True
-VER.qualiPos = 3
-VER.DNF = True
-VER.finishRace = False
-VER.beatTeammate = False
+VER.qualiPos = 2
+VER.racePos = 2
+VER.finishRace = True
+VER.beatTeammate = True
 VER.fastestLap = False
-VER.streaks = 0
+VER.streaks = 5
 VER.calculateQuali()
 VER.calculateRace()
 VER.calculateTotal()
@@ -160,7 +160,7 @@ ALB = Driver()
 ALB.name = 'ALB'
 ALB.qualiSesh = 'Q3'
 ALB.beatTeammateQuali = False
-ALB.qualiPos = 4
+ALB.qualiPos = 10
 ALB.racePos = 3
 ALB.finishRace = True
 ALB.beatTeammate = True
@@ -173,11 +173,11 @@ ALB.calculateTotal()
 
 STR = Driver()
 STR.name = 'STR'
-STR.qualiSesh = 'Q3'
+STR.qualiSesh = 'Q2'
 STR.beatTeammateQuali = False
-STR.qualiPos = 6
-STR.DNF = True
-STR.finishRace = False
+STR.qualiPos = 13
+STR.racePos = 13
+STR.finishRace = True
 STR.beatTeammate = False
 STR.fastestLap = False
 STR.streaks = 0
@@ -190,12 +190,12 @@ PER = Driver()
 PER.name = 'PER'
 PER.qualiSesh = 'Q3'
 PER.beatTeammateQuali = True
-PER.qualiPos = 7
+PER.qualiPos = 4
 PER.racePos = 5
 PER.finishRace = True
 PER.beatTeammate = True
 PER.fastestLap = False
-PER.streaks = 15
+PER.streaks = 0
 PER.calculateQuali()
 PER.calculateRace()
 PER.calculateTotal()
@@ -203,9 +203,9 @@ PER.calculateTotal()
 
 NOR = Driver()
 NOR.name = 'NOR'
-NOR.qualiSesh = 'Q2'
+NOR.qualiSesh = 'Q3'
 NOR.beatTeammateQuali = False
-NOR.qualiPos = 11
+NOR.qualiPos = 8
 NOR.racePos = 6
 NOR.finishRace = True
 NOR.beatTeammate = True
@@ -220,9 +220,9 @@ SAI = Driver()
 SAI.name = 'SAI'
 SAI.qualiSesh = 'Q3'
 SAI.beatTeammateQuali = True
-SAI.qualiPos = 9
-SAI.DNF = True
-SAI.finishRace = False
+SAI.qualiPos = 6
+SAI.racePos = 6
+SAI.finishRace = True
 SAI.beatTeammate = True
 SAI.fastestLap = False
 SAI.streaks = 0
@@ -235,7 +235,7 @@ VET = Driver()
 VET.name = 'VET'
 VET.qualiSesh = 'Q2'
 VET.beatTeammateQuali = False
-VET.qualiPos = 14
+VET.qualiPos = 15
 VET.racePos = 10
 VET.finishRace = True
 VET.beatTeammate = False
@@ -248,9 +248,9 @@ VET.calculateTotal()
 
 LEC = Driver()
 LEC.name = 'LEC'
-LEC.qualiSesh = 'Q3'
+LEC.qualiSesh = 'Q2'
 LEC.beatTeammateQuali = True
-LEC.qualiPos = 5
+LEC.qualiPos = 11
 LEC.racePos = 8
 LEC.finishRace = True
 LEC.beatTeammate = True
@@ -263,9 +263,9 @@ LEC.calculateTotal()
 
 RUS = Driver()
 RUS.name = 'RUS'
-RUS.qualiSesh = 'Q1'
+RUS.qualiSesh = 'Q2'
 RUS.beatTeammateQuali = True
-RUS.qualiPos = 18
+RUS.qualiPos = 14
 RUS.racePos = 11
 RUS.finishRace = True
 RUS.beatTeammate = True
@@ -281,8 +281,8 @@ LAT.name = 'LAT'
 LAT.qualiSesh = 'Q1'
 LAT.beatTeammateQuali = False
 LAT.qualiPos = 19
-LAT.DNF = True
-LAT.finishRace = False
+LAT.racePos = 19
+LAT.finishRace = True
 LAT.beatTeammate = False
 LAT.fastestLap = False
 LAT.streaks = 0
@@ -293,9 +293,9 @@ LAT.calculateTotal()
 
 RAI = Driver()
 RAI.name = 'RAI'
-RAI.qualiSesh = 'Q2'
-RAI.beatTeammateQuali = True
-RAI.qualiPos = 13
+RAI.qualiSesh = 'Q1'
+RAI.beatTeammateQuali = False
+RAI.qualiPos = 20
 RAI.racePos = 9
 RAI.finishRace = True
 RAI.beatTeammate = True
@@ -309,10 +309,10 @@ RAI.calculateTotal()
 GIO = Driver()
 GIO.name = 'GIO'
 GIO.qualiSesh = 'Q1'
-GIO.beatTeammateQuali = False
+GIO.beatTeammateQuali = True
 GIO.qualiPos = 17
-GIO.DNF = True
-GIO.finishRace = False
+GIO.racePos = 17
+GIO.finishRace = True
 GIO.beatTeammate = False
 GIO.fastestLap = False
 GIO.streaks = 0
@@ -324,10 +324,10 @@ GIO.calculateTotal()
 GAS = Driver()
 GAS.name = 'GAS'
 GAS.qualiSesh = 'Q1'
-GAS.beatTeammateQuali = False
-GAS.qualiPos = 16
-GAS.DNF = True
-GAS.finishRace = False
+GAS.beatTeammateQuali = True
+GAS.qualiPos = 9
+GAS.racePos = 16
+GAS.finishRace = True
 GAS.beatTeammate = False
 GAS.fastestLap = False
 GAS.streaks = 0
@@ -339,7 +339,7 @@ GAS.calculateTotal()
 KVY = Driver()
 KVY.name = 'KVY'
 KVY.qualiSesh = 'Q2'
-KVY.beatTeammateQuali = True
+KVY.beatTeammateQuali = False
 KVY.qualiPos = 12
 KVY.racePos = 7
 KVY.finishRace = True
@@ -355,9 +355,9 @@ MAG = Driver()
 MAG.name = 'MAG'
 MAG.qualiSesh = 'Q1'
 MAG.beatTeammateQuali = False
-MAG.qualiPos = 20
-MAG.DNF = True
-MAG.finishRace = False
+MAG.qualiPos = 18
+MAG.racePos = 18
+MAG.finishRace = True
 MAG.beatTeammate = False
 MAG.fastestLap = False
 MAG.streaks = 0
@@ -370,7 +370,7 @@ GRO = Driver()
 GRO.name = 'GRO'
 GRO.qualiSesh = 'Q2'
 GRO.beatTeammateQuali = True
-GRO.qualiPos = 15
+GRO.qualiPos = 16
 GRO.racePos = 12
 GRO.finishRace = True
 GRO.beatTeammate = True
@@ -385,7 +385,7 @@ RIC = Driver()
 RIC.name = 'RIC'
 RIC.qualiSesh = 'Q3'
 RIC.beatTeammateQuali = True
-RIC.qualiPos = 8
+RIC.qualiPos = 5
 RIC.racePos = 4
 RIC.finishRace = True
 RIC.beatTeammate = True
@@ -400,9 +400,9 @@ OCO = Driver()
 OCO.name = 'OCO'
 OCO.qualiSesh = 'Q3'
 OCO.beatTeammateQuali = False
-OCO.qualiPos = 10
-OCO.DNF = True
-OCO.finishRace = False
+OCO.qualiPos = 7
+OCO.racePos = 7
+OCO.finishRace = True
 OCO.beatTeammate = False
 OCO.fastestLap = False
 OCO.streaks = 0
