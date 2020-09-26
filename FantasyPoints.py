@@ -323,7 +323,7 @@ GIO.calculateTotal()
 
 GAS = Driver()
 GAS.name = 'GAS'
-GAS.qualiSesh = 'Q1'
+GAS.qualiSesh = 'Q3'
 GAS.beatTeammateQuali = True
 GAS.qualiPos = 9
 GAS.racePos = 16
@@ -368,7 +368,7 @@ MAG.calculateTotal()
 
 GRO = Driver()
 GRO.name = 'GRO'
-GRO.qualiSesh = 'Q2'
+GRO.qualiSesh = 'Q1'
 GRO.beatTeammateQuali = True
 GRO.qualiPos = 16
 GRO.racePos = 12
