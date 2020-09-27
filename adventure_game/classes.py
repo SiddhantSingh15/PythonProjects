@@ -1,5 +1,4 @@
 import random
-# testing
 
 class Room:
 
