@@ -3,7 +3,7 @@ from openpyxl import *
 
 # QUALI ONE
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-russian-grand-prix/classification/d08829dd-2a9e-4c1b-8908-933406635417'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-eifel-grand-prix/classification/a5855a5a-cd83-47fb-b9e1-e24bd3fe336f'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -43,7 +43,7 @@ for racer in racers:
         NOR.append(str(racer.text.split(" ")[10]))
     elif racer.text.split(" ")[1] == '11':
         PER.append(str(racer.text.split(" ")[11]))
-    elif racer.text.split(" ")[1] == '18':
+    elif racer.text.split(" ")[1] == '27':
         STR.append(str(racer.text.split(" ")[11]))
     elif racer.text.split(" ")[1] == '3':
         RIC.append(str(racer.text.split(" ")[11]))
@@ -75,7 +75,7 @@ for racer in racers:
 
 file_path = "/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q10']
+s = wb['Q11']
 
 colx = 2
 rowx = 3
@@ -269,7 +269,7 @@ print("\n")
 
 # QUALI TWO
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-russian-grand-prix/classification/8a1f8d3d-6bc0-4724-88e4-2b781ef69a09'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-eifel-grand-prix/classification/41f1518d-d297-45c4-94db-dad8eea6c377'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -309,7 +309,7 @@ for racer in range(15):
         NOR.append(str(racers[racer].text.split(" ")[10]))
     elif racers[racer].text.split(" ")[1] == '11':
         PER.append(str(racers[racer].text.split(" ")[11]))
-    elif racers[racer].text.split(" ")[1] == '18':
+    elif racers[racer].text.split(" ")[1] == '27':
         STR.append(str(racers[racer].text.split(" ")[11]))
     elif racers[racer].text.split(" ")[1] == '3':
         RIC.append(str(racers[racer].text.split(" ")[11]))
@@ -340,7 +340,7 @@ for racer in range(15):
 
 file_path = "/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q10']
+s = wb['Q11']
 
 colx = 2
 rowx = 3
@@ -533,7 +533,7 @@ print("\n")
 
 # QUALI THREE
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-russian-grand-prix/classification/30c414d0-ab11-4ce3-8663-16dab564d8d2'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-eifel-grand-prix/classification/c8ea0477-79f8-4172-95ba-c220b6c31f8a'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -573,7 +573,7 @@ for racer in range(10):
         NOR.append(str(racers[racer].text.split(" ")[10]))
     elif racers[racer].text.split(" ")[1] == '11':
         PER.append(str(racers[racer].text.split(" ")[11]))
-    elif racers[racer].text.split(" ")[1] == '18':
+    elif racers[racer].text.split(" ")[1] == '27':
         STR.append(str(racers[racer].text.split(" ")[11]))
     elif racers[racer].text.split(" ")[1] == '3':
         RIC.append(str(racers[racer].text.split(" ")[11]))
@@ -604,7 +604,7 @@ for racer in range(10):
 
 file_path = "/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q10']
+s = wb['Q11']
 
 colx = 2
 rowx = 3
