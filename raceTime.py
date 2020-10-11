@@ -173,7 +173,7 @@ for racer in racers:
 
 file_path = "/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['R10']
+s = wb['R11']
 
 colx = 3
 rowx = 3
