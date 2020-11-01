@@ -1,7 +1,7 @@
 from selenium import webdriver
 from openpyxl import *
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-portuguese-grand-prix/classification'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-emilia-romagna-grand-prix/classification'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -173,7 +173,7 @@ for racer in racers:
 
 file_path = "/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['R12']
+s = wb['R13']
 
 colx = 3
 rowx = 3

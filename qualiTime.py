@@ -3,7 +3,7 @@ from openpyxl import *
 
 # QUALI ONE
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-portuguese-grand-prix/classification/5de2c5f2-782f-414d-bd20-e6e0a78d4ffb'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-emilia-romagna-grand-prix/classification/ea3d69ad-36a8-4a86-9428-1d2009f929c4'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -75,7 +75,7 @@ for racer in racers:
 
 file_path = "/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q12']
+s = wb['Q13']
 
 colx = 2
 rowx = 3
@@ -269,7 +269,7 @@ print("\n")
 
 # QUALI TWO
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-portuguese-grand-prix/classification/37ad3a2e-e4e0-4116-b2dd-88046bc4e66c'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-emilia-romagna-grand-prix/classification/5e6d4916-04b6-469e-b9ad-0c72ba2f7701'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -340,7 +340,7 @@ for racer in range(15):
 
 file_path = "/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q12']
+s = wb['Q13']
 
 colx = 2
 rowx = 3
@@ -533,7 +533,7 @@ print("\n")
 
 # QUALI THREE
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-portuguese-grand-prix/classification/8b1c352b-f144-475e-a7d4-8ff59767de44'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-emilia-romagna-grand-prix/classification/2c973bf1-c9bc-4201-b97d-da6f14605b56'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -604,7 +604,7 @@ for racer in range(9):
 
 file_path = "/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q12']
+s = wb['Q13']
 
 colx = 2
 rowx = 3
