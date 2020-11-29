@@ -1,7 +1,7 @@
 from selenium import webdriver
 from openpyxl import *
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-turkish-grand-prix/classification'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-bahrain-grand-prix/classification/e05a44dc-d24d-4c21-8912-894b012f6456'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -19,7 +19,7 @@ OCO = []
 GAS = []
 KVY = []
 MAG = []
-GRO = []
+# GRO = []
 RUS = []
 LAT = []
 RAI = []
@@ -113,13 +113,13 @@ for racer in racers:
             MAG.append('DNF')
         MAG.append(str(racer.text.split(" ")[9]))
         MAG.append(int(racer.text.split(" ")[8]))
-    elif racer.text.split(" ")[1] == '8':
-        if racer.text.split(" ")[0] != 'DNF':
-            GRO.append(int(racer.text.split(" ")[0]))
-        else:
-            GRO.append('DNF')
-        GRO.append(str(racer.text.split(" ")[9]))
-        GRO.append(int(racer.text.split(" ")[8]))
+    # elif racer.text.split(" ")[1] == '8':
+    #     if racer.text.split(" ")[0] != 'DNF':
+    #         GRO.append(int(racer.text.split(" ")[0]))
+    #     else:
+    #         GRO.append('DNF')
+    #     GRO.append(str(racer.text.split(" ")[9]))
+    #     GRO.append(int(racer.text.split(" ")[8]))
     elif racer.text.split(" ")[1] == '99':
         if racer.text.split(" ")[0] != 'DNF':
             GIO.append(int(racer.text.split(" ")[0]))
@@ -173,7 +173,7 @@ for racer in racers:
 
 file_path = "/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['R14']
+s = wb['R15']
 
 colx = 3
 rowx = 3
@@ -326,16 +326,16 @@ for rowx in range(3, 23):
         timeLoc.value = time
         lapLoc.value = lap
         
-    elif s.cell(rowx, colx).value == 'GRO':
-        position = GRO[0]
-        time = GRO[1]
-        lap = GRO[2]
-        posLoc = s.cell(rowx, posCol)
-        timeLoc = s.cell(rowx, timeCol)
-        lapLoc = s.cell(rowx, lapCol)
-        posLoc.value = position
-        timeLoc.value = time
-        lapLoc.value = lap
+    # elif s.cell(rowx, colx).value == 'GRO':
+    #     position = GRO[0]
+    #     time = GRO[1]
+    #     lap = GRO[2]
+    #     posLoc = s.cell(rowx, posCol)
+    #     timeLoc = s.cell(rowx, timeCol)
+    #     lapLoc = s.cell(rowx, lapCol)
+    #     posLoc.value = position
+    #     timeLoc.value = time
+    #     lapLoc.value = lap
         
     elif s.cell(rowx, colx).value == 'RUS':
         position = RUS[0]

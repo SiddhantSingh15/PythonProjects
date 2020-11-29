@@ -3,7 +3,7 @@ from openpyxl import *
 
 # QUALI ONE
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-turkish-grand-prix/classification/91b13c93-afaf-4fd6-ab77-621854e96a85'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-bahrain-grand-prix/classification/55c7c252-395a-416c-b61f-d09caf67cc85'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -75,7 +75,7 @@ for racer in racers:
 
 file_path = "/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q14']
+s = wb['Q15']
 
 colx = 2
 rowx = 3
@@ -269,7 +269,7 @@ print("\n")
 
 # QUALI TWO
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-turkish-grand-prix/classification/029eaf37-7d3a-4d39-98f6-1a575a75ac83'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-bahrain-grand-prix/classification/41275c18-9dce-4ef3-9aa5-a2048fe88e5b'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -281,7 +281,7 @@ LEC = []
 VER = []
 ALB = []
 NOR = []
-SAI = []
+# SAI = []
 RIC = []
 OCO = []
 GAS = []
@@ -340,7 +340,7 @@ for racer in range(15):
 
 file_path = "/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q14']
+s = wb['Q15']
 
 colx = 2
 rowx = 3
@@ -410,14 +410,14 @@ for rowx in range(3, 23):
             timeLoc = s.cell(rowx, timeCol)
             timeLoc.value = 'NA'
 
-    elif s.cell(rowx, colx).value == 'SAI':
-        if len(SAI) != 0:
-            time = SAI[0]
-            timeLoc = s.cell(rowx, timeCol)
-            timeLoc.value = time
-        else:
-            timeLoc = s.cell(rowx, timeCol)
-            timeLoc.value = 'NA'
+    # elif s.cell(rowx, colx).value == 'SAI':
+    #     if len(SAI) != 0:
+    #         time = SAI[0]
+    #         timeLoc = s.cell(rowx, timeCol)
+    #         timeLoc.value = time
+    #     else:
+    #         timeLoc = s.cell(rowx, timeCol)
+    #         timeLoc.value = 'NA'
 
     elif s.cell(rowx, colx).value == 'RIC':
         if len(RIC) != 0:
@@ -533,7 +533,7 @@ print("\n")
 
 # QUALI THREE
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-turkish-grand-prix/classification/90bcf63b-811f-491e-a0da-701f18047b5d'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-bahrain-grand-prix/classification/0e4f2341-e23e-466b-82f8-ff163e13e71e'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
@@ -604,7 +604,7 @@ for racer in range(9):
 
 file_path = "/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q14']
+s = wb['Q15']
 
 colx = 2
 rowx = 3
