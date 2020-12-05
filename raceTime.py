@@ -1,12 +1,12 @@
 from selenium import webdriver
 from openpyxl import *
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-bahrain-grand-prix/classification/e05a44dc-d24d-4c21-8912-894b012f6456'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-bahrain-grand-prix/classification/e05a63dc-d24d-4c21-8912-894b012f6456'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
 
-HAM = []
+RUS = []
 BOT = []
 VET = []
 LEC = []
@@ -19,8 +19,8 @@ OCO = []
 GAS = []
 KVY = []
 MAG = []
-# GRO = []
-RUS = []
+FIT = []
+AIT = []
 LAT = []
 RAI = []
 GIO = []
@@ -29,13 +29,13 @@ STR = []
 
 for racer in racers:
     print(racer.text.split(" "))
-    if racer.text.split(" ")[1] == '44':
+    if racer.text.split(" ")[1] == '63':
         if racer.text.split(" ")[0] != 'DNF':
-            HAM.append(int(racer.text.split(" ")[0]))
+            RUS.append(int(racer.text.split(" ")[0]))
         else:
-            HAM.append('DNF')
-        HAM.append(str(racer.text.split(" ")[12]))
-        HAM.append(int(racer.text.split(" ")[11]))
+            RUS.append('DNF')
+        RUS.append(str(racer.text.split(" ")[12]))
+        RUS.append(int(racer.text.split(" ")[11]))
     elif racer.text.split(" ")[1] == '77':
         if racer.text.split(" ")[0] != 'DNF':
             BOT.append(int(racer.text.split(" ")[0]))
@@ -113,13 +113,13 @@ for racer in racers:
             MAG.append('DNF')
         MAG.append(str(racer.text.split(" ")[9]))
         MAG.append(int(racer.text.split(" ")[8]))
-    # elif racer.text.split(" ")[1] == '8':
-    #     if racer.text.split(" ")[0] != 'DNF':
-    #         GRO.append(int(racer.text.split(" ")[0]))
-    #     else:
-    #         GRO.append('DNF')
-    #     GRO.append(str(racer.text.split(" ")[9]))
-    #     GRO.append(int(racer.text.split(" ")[8]))
+    elif racer.text.split(" ")[1] == '51':
+        if racer.text.split(" ")[0] != 'DNF':
+            FIT.append(int(racer.text.split(" ")[0]))
+        else:
+            FIT.append('DNF')
+        FIT.append(str(racer.text.split(" ")[9]))
+        FIT.append(int(racer.text.split(" ")[8]))
     elif racer.text.split(" ")[1] == '99':
         if racer.text.split(" ")[0] != 'DNF':
             GIO.append(int(racer.text.split(" ")[0]))
@@ -134,13 +134,13 @@ for racer in racers:
             GAS.append('DNF')
         GAS.append(str(racer.text.split(" ")[9]))
         GAS.append(int(racer.text.split(" ")[8]))
-    elif racer.text.split(" ")[1] == '63':
+    elif racer.text.split(" ")[1] == '89':
         if racer.text.split(" ")[0] != 'DNF':
-            RUS.append(int(racer.text.split(" ")[0]))
+            AIT.append(int(racer.text.split(" ")[0]))
         else:
-            RUS.append('DNF')
-        RUS.append(str(racer.text.split(" ")[9]))
-        RUS.append(int(racer.text.split(" ")[8]))
+            AIT.append('DNF')
+        AIT.append(str(racer.text.split(" ")[9]))
+        AIT.append(int(racer.text.split(" ")[8]))
     elif racer.text.split(" ")[1] == '6':
         if racer.text.split(" ")[0] != 'DNF':
             LAT.append(int(racer.text.split(" ")[0]))
@@ -173,7 +173,7 @@ for racer in racers:
 
 file_path = "/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['R15']
+s = wb['R16']
 
 colx = 3
 rowx = 3
@@ -183,10 +183,10 @@ for rowx in range(3, 23):
     posCol = 2
     timeCol = 5
     lapCol = 6
-    if s.cell(rowx, colx).value == 'HAM':
-        position = HAM[0]
-        time = HAM[1]
-        lap = HAM[2]
+    if s.cell(rowx, colx).value == 'RUS':
+        position = RUS[0]
+        time = RUS[1]
+        lap = RUS[2]
         posLoc = s.cell(rowx, posCol)
         timeLoc = s.cell(rowx, timeCol)
         lapLoc = s.cell(rowx, lapCol)
@@ -326,21 +326,21 @@ for rowx in range(3, 23):
         timeLoc.value = time
         lapLoc.value = lap
         
-    # elif s.cell(rowx, colx).value == 'GRO':
-    #     position = GRO[0]
-    #     time = GRO[1]
-    #     lap = GRO[2]
-    #     posLoc = s.cell(rowx, posCol)
-    #     timeLoc = s.cell(rowx, timeCol)
-    #     lapLoc = s.cell(rowx, lapCol)
-    #     posLoc.value = position
-    #     timeLoc.value = time
-    #     lapLoc.value = lap
+    elif s.cell(rowx, colx).value == 'FIT':
+        position = FIT[0]
+        time = FIT[1]
+        lap = FIT[2]
+        posLoc = s.cell(rowx, posCol)
+        timeLoc = s.cell(rowx, timeCol)
+        lapLoc = s.cell(rowx, lapCol)
+        posLoc.value = position
+        timeLoc.value = time
+        lapLoc.value = lap
         
-    elif s.cell(rowx, colx).value == 'RUS':
-        position = RUS[0]
-        time = RUS[1]
-        lap = RUS[2]
+    elif s.cell(rowx, colx).value == 'AIT':
+        position = AIT[0]
+        time = AIT[1]
+        lap = AIT[2]
         posLoc = s.cell(rowx, posCol)
         timeLoc = s.cell(rowx, timeCol)
         lapLoc = s.cell(rowx, lapCol)
