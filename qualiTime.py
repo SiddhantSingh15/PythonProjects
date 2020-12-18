@@ -3,12 +3,12 @@ from openpyxl import *
 
 # QUALI ONE
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-sakhir-grand-prix/classification/302780a8-d402-4a2b-8c80-d8c9335debef'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-abu-dhabi-grand-prix/classification/68a407e5-2fd4-4797-afbb-5159450944e2'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
 
-RUS = []
+HAM = []
 BOT = []
 VET = []
 LEC = []
@@ -22,7 +22,7 @@ GAS = []
 KVY = []
 MAG = []
 FIT = []
-AIT = []
+RUS = []
 LAT = []
 RAI = []
 GIO = []
@@ -31,8 +31,8 @@ STR = []
 
 for racer in racers:
     print(racer.text.split(" "))
-    if racer.text.split(" ")[1] == '63':
-        RUS.append(str(racer.text.split(" ")[12]))
+    if racer.text.split(" ")[1] == '44':
+        HAM.append(str(racer.text.split(" ")[12]))
     elif racer.text.split(" ")[1] == '77':
         BOT.append(str(racer.text.split(" ")[11]))
     elif racer.text.split(" ")[1] == '33':
@@ -61,8 +61,8 @@ for racer in racers:
         GIO.append(str(racer.text.split(" ")[10]))
     elif racer.text.split(" ")[1] == '10':
         GAS.append(str(racer.text.split(" ")[9]))
-    elif racer.text.split(" ")[1] == '89':
-        AIT.append(str(racer.text.split(" ")[9]))
+    elif racer.text.split(" ")[1] == '63':
+        RUS.append(str(racer.text.split(" ")[9]))
     elif racer.text.split(" ")[1] == '6':
         LAT.append(str(racer.text.split(" ")[8]))
     elif racer.text.split(" ")[1] == '31':
@@ -75,7 +75,7 @@ for racer in racers:
 
 file_path = "/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q16']
+s = wb['Q17']
 
 colx = 2
 rowx = 3
@@ -83,9 +83,9 @@ rowx = 3
 
 for rowx in range(3, 23):
     timeCol = 7
-    if s.cell(rowx, colx).value == 'RUS':
-        if len(RUS) != 0:
-            time = RUS[0]
+    if s.cell(rowx, colx).value == 'HAM':
+        if len(HAM) != 0:
+            time = HAM[0]
             timeLoc = s.cell(rowx, timeCol)
             timeLoc.value = time
         else:
@@ -209,9 +209,9 @@ for rowx in range(3, 23):
             timeLoc = s.cell(rowx, timeCol)
             timeLoc.value = 'NA'
 
-    elif s.cell(rowx, colx).value == 'AIT':
-        if len(AIT) != 0:
-            time = AIT[0]
+    elif s.cell(rowx, colx).value == 'RUS':
+        if len(RUS) != 0:
+            time = RUS[0]
             timeLoc = s.cell(rowx, timeCol)
             timeLoc.value = time
         else:
@@ -269,12 +269,12 @@ print("\n")
 
 # QUALI TWO
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-sakhir-grand-prix/classification/e0ca3e11-58e8-4318-8d4c-92ee97774b74'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-abu-dhabi-grand-prix/classification/a243e285-0851-4aa1-a0e5-55fcc8c394e5'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
 
-RUS = []
+HAM = []
 BOT = []
 VET = []
 LEC = []
@@ -288,7 +288,7 @@ GAS = []
 KVY = []
 MAG = []
 FIT = []
-AIT = []
+RUS = []
 LAT = []
 RAI = []
 GIO = []
@@ -297,8 +297,8 @@ STR = []
 
 for racer in range(15):
     print(racers[racer].text.split(" "))
-    if racers[racer].text.split(" ")[1] == '63':
-        RUS.append(str(racers[racer].text.split(" ")[12]))
+    if racers[racer].text.split(" ")[1] == '44':
+        HAM.append(str(racers[racer].text.split(" ")[12]))
     elif racers[racer].text.split(" ")[1] == '77':
         BOT.append(str(racers[racer].text.split(" ")[11]))
     elif racers[racer].text.split(" ")[1] == '33':
@@ -327,8 +327,8 @@ for racer in range(15):
         GIO.append(str(racers[racer].text.split(" ")[10]))
     elif racers[racer].text.split(" ")[1] == '10':
         GAS.append(str(racers[racer].text.split(" ")[9]))
-    elif racers[racer].text.split(" ")[1] == '89':
-        AIT.append(str(racers[racer].text.split(" ")[9]))
+    elif racers[racer].text.split(" ")[1] == '63':
+        RUS.append(str(racers[racer].text.split(" ")[9]))
     elif racers[racer].text.split(" ")[1] == '6':
         LAT.append(str(racers[racer].text.split(" ")[8]))
     elif racers[racer].text.split(" ")[1] == '31':
@@ -340,16 +340,16 @@ for racer in range(15):
 
 file_path = "/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q16']
+s = wb['Q17']
 
 colx = 2
 rowx = 3
 
 for rowx in range(3, 23):
     timeCol = 8
-    if s.cell(rowx, colx).value == 'RUS':
-        if len(RUS) != 0:
-            time = RUS[0]
+    if s.cell(rowx, colx).value == 'HAM':
+        if len(HAM) != 0:
+            time = HAM[0]
             timeLoc = s.cell(rowx, timeCol)
             timeLoc.value = time
         else:
@@ -473,9 +473,9 @@ for rowx in range(3, 23):
             timeLoc = s.cell(rowx, timeCol)
             timeLoc.value = 'NA'
 
-    elif s.cell(rowx, colx).value == 'AIT':
-        if len(AIT) != 0:
-            time = AIT[0]
+    elif s.cell(rowx, colx).value == 'RUS':
+        if len(RUS) != 0:
+            time = RUS[0]
             timeLoc = s.cell(rowx, timeCol)
             timeLoc.value = time
         else:
@@ -533,12 +533,12 @@ print("\n")
 
 # QUALI THREE
 
-url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-sakhir-grand-prix/classification/482c8965-80e9-4970-b5eb-627f060b28ff'
+url = 'https://fiaresultsandstatistics.motorsportstats.com/results/2020-abu-dhabi-grand-prix/classification/ee442193-13a3-40f5-9d1f-41fc6a3208a9'
 driver = webdriver.Chrome('/Users/siddhantsingh/Documents/Onedrive/CSProjects/PythonProjects/chromedriver')
 driver.get(url)
 racers = driver.find_elements_by_class_name("_2xhp6")
 
-RUS = []
+HAM = []
 BOT = []
 VET = []
 LEC = []
@@ -552,7 +552,7 @@ GAS = []
 KVY = []
 MAG = []
 FIT = []
-AIT = []
+RUS = []
 LAT = []
 RAI = []
 GIO = []
@@ -561,8 +561,8 @@ STR = []
 
 for racer in range(10):
     print(racers[racer].text.split(" "))
-    if racers[racer].text.split(" ")[1] == '63':
-        RUS.append(str(racers[racer].text.split(" ")[12]))
+    if racers[racer].text.split(" ")[1] == '44':
+        HAM.append(str(racers[racer].text.split(" ")[12]))
     elif racers[racer].text.split(" ")[1] == '77':
         BOT.append(str(racers[racer].text.split(" ")[11]))
     elif racers[racer].text.split(" ")[1] == '33':
@@ -591,8 +591,8 @@ for racer in range(10):
         GIO.append(str(racers[racer].text.split(" ")[10]))
     elif racers[racer].text.split(" ")[1] == '10':
         GAS.append(str(racers[racer].text.split(" ")[9]))
-    elif racers[racer].text.split(" ")[1] == '89':
-        AIT.append(str(racers[racer].text.split(" ")[9]))
+    elif racers[racer].text.split(" ")[1] == '63':
+        RUS.append(str(racers[racer].text.split(" ")[9]))
     elif racers[racer].text.split(" ")[1] == '6':
         LAT.append(str(racers[racer].text.split(" ")[8]))
     elif racers[racer].text.split(" ")[1] == '31':
@@ -604,16 +604,16 @@ for racer in range(10):
 
 file_path = "/Users/siddhantsingh/Documents/OneDrive/CSProjects/PythonProjects/F1.xlsx"
 wb = load_workbook(file_path)
-s = wb['Q16']
+s = wb['Q17']
 
 colx = 2
 rowx = 3
 
 for rowx in range(3, 23):
     timeCol = 9
-    if s.cell(rowx, colx).value == 'RUS':
-        if len(RUS) != 0:
-            time = RUS[0]
+    if s.cell(rowx, colx).value == 'HAM':
+        if len(HAM) != 0:
+            time = HAM[0]
             timeLoc = s.cell(rowx, timeCol)
             timeLoc.value = time
         else:
@@ -737,9 +737,9 @@ for rowx in range(3, 23):
             timeLoc = s.cell(rowx, timeCol)
             timeLoc.value = 'NA'
 
-    elif s.cell(rowx, colx).value == 'AIT':
-        if len(AIT) != 0:
-            time = AIT[0]
+    elif s.cell(rowx, colx).value == 'RUS':
+        if len(RUS) != 0:
+            time = RUS[0]
             timeLoc = s.cell(rowx, timeCol)
             timeLoc.value = time
         else:
